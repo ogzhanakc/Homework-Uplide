@@ -29,6 +29,25 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [LocalWeatherView]
+class LocalWeatherRoute extends PageRouteInfo<void> {
+  const LocalWeatherRoute({List<PageRouteInfo>? children})
+      : super(
+          LocalWeatherRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'LocalWeatherRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const LocalWeatherView();
+    },
+  );
+}
+
+/// generated route for
 /// [SplashScreenView]
 class SplashScreenRoute extends PageRouteInfo<void> {
   const SplashScreenRoute({List<PageRouteInfo>? children})

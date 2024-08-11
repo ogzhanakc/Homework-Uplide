@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_homework_uplide/core/init/routes/app_router.dart';
+
 
 class WeatherViewActionButton extends StatelessWidget {
   const WeatherViewActionButton({super.key});
@@ -10,7 +11,7 @@ class WeatherViewActionButton extends StatelessWidget {
     return FloatingActionButton(
       onPressed:
           (){
-           
+           context.router.push(LocalWeatherRoute());
           },
       child: Icon(Icons.history),
     );
