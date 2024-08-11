@@ -27,7 +27,7 @@ class WeatherViewModel extends ChangeNotifier {
 
   Future<void> fetchWeather() async {
     _isLoading = true;
-
+    _weatherList = [];
     for (String city in cityList) {
       final response = await _weatherService.getWeather(city);
       WeatherModel? weatherModel = WeatherModel.fromJson(response);
