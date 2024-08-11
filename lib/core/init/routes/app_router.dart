@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_homework_uplide/pages/home/view/home_view.dart';
 import 'package:flutter_homework_uplide/pages/splash_screen/view/splash_screen_view.dart';
+import 'package:flutter_homework_uplide/pages/weather/model/weather_model.dart';
+import 'package:flutter_homework_uplide/pages/weather/view/weather_detail_view.dart';
 
 part 'app_router.gr.dart';
 

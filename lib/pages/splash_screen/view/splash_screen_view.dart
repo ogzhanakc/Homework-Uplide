@@ -9,6 +9,7 @@ class SplashScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     Provider.of<SplashScreenViewModel>(context, listen: false).routeToHome(context);
     return Consumer<SplashScreenViewModel>(
       builder: (context, viewModel, child){
