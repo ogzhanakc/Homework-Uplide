@@ -14,5 +14,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: SplashScreenRoute.page, initial: true),
         AutoRoute(page: HomeRoute.page),
         AutoRoute(page: LocalWeatherRoute.page),
+        AutoRoute(page: WeatherDetailRoute.page),
       ];
 }

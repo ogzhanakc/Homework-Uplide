@@ -6,5 +6,10 @@ final locator = GetIt.instance;
 
 void setupLocator() {
   locator.registerFactory<WeatherService>(() => WeatherService());
-  locator.registerFactory<CacheManager>(() => CacheManager());
+  //locator.registerFactory<CacheManager>(() => CacheManager());
+  locator.registerSingletonAsync<CacheManager>(() async {
+    final cacheManager = CacheManager();
+    await cacheManager.init();
+    return cacheManager;
+  });
 }
