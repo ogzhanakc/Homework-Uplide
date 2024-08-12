@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_homework_uplide/core/constants/app_constants.dart';
 import 'package:flutter_homework_uplide/pages/weather/view_model/weather_view_model.dart';
 import 'package:flutter_homework_uplide/pages/weather/widgets/weather_card.dart';
-import 'package:flutter_homework_uplide/pages/home/widgets/custom_fab.dart';
 import 'package:provider/provider.dart';
 
 

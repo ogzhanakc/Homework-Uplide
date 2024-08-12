@@ -5,8 +5,6 @@ import 'package:provider/provider.dart';
 
 import 'package:flutter_homework_uplide/core/constants/app_constants.dart';
 import 'package:flutter_homework_uplide/core/init/routes/app_router.dart';
-import 'package:flutter_homework_uplide/pages/profile/model/user_model.dart';
-import 'package:flutter_homework_uplide/pages/profile/view/profile_view.dart';
 import 'package:flutter_homework_uplide/pages/profile/view_model/profile_view_model.dart';
 
 class ProfileCard extends StatelessWidget {

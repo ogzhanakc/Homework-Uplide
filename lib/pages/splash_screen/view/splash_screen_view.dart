@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_homework_uplide/pages/profile/view_model/profile_view_model.dart';
 import 'package:flutter_homework_uplide/pages/splash_screen/view_model/splash_screen_view_model.dart';
 import 'package:provider/provider.dart';
 
