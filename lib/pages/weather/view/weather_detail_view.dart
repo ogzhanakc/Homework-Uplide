@@ -32,7 +32,7 @@ class WeatherDetailView extends StatelessWidget {
                 ),
                 WeatherText(text: weatherModel.city),
                 WeatherText(text: weatherModel.weather),
-                WeatherText(text: weatherModel.temp.toString()),
+                WeatherText(text: "${weatherModel.temp} Kelvin"),
             ],
           ),
                 ),

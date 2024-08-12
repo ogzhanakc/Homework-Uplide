@@ -9,7 +9,7 @@ import 'package:flutter_homework_uplide/pages/weather/service/weather_service.da
 
 class WeatherViewModel extends ChangeNotifier {
   final WeatherService _weatherService = locator<WeatherService>();
-  final CacheManager _cacheManager =  locator<CacheManager>();
+  final CacheManager _cacheManager = locator<CacheManager>();
 
   bool _isLoading = false;
   bool get isLoading => _isLoading;
@@ -39,15 +39,19 @@ class WeatherViewModel extends ChangeNotifier {
   }
 
   Future<void> saveLocal(WeatherModel weatherModel) async {
-
     List<String> localList =
         await _cacheManager.getStringList(CacheKeys.WEATHERS);
 
     var modelToJson = weatherModel.toJson();
     String value = jsonEncode(modelToJson);
-    localList.add(value);
+    if (!localList.contains(value)) {
+      localList.add(value);
+    }
     await _cacheManager.setStringList(CacheKeys.WEATHERS, localList);
 
     notifyListeners();
   }
+
+
+  
 }

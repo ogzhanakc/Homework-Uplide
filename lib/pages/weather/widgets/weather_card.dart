@@ -37,7 +37,7 @@ class WeatherCard extends StatelessWidget {
                 ),
                 WeatherText(text: weatherModel.city),
                 WeatherText(text: weatherModel.weather),
-                WeatherText(text: weatherModel.city),
+                WeatherText(text: "${(weatherModel.temp-273).floorToDouble()} Celcius"),
         
               ],
             ),
@@ -60,7 +60,7 @@ class WeatherText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Text(text),
+      child: Text(text,textAlign: TextAlign.center,),
     );
   }
 }
