@@ -20,26 +20,27 @@ class WeatherCard extends StatelessWidget {
         viewModel.saveLocal(weatherModel);
         context.router.push(WeatherDetailRoute(weatherModel: weatherModel));
       },
-      child: Card(
-          color: const Color.fromARGB(255, 206, 234, 255),
-        
-        child: Container(
-          width: AppConstants().screenWidth(context) / 3.5,
-          
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Icon(
-                  Icons.sunny,
-                  color: Colors.yellow,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Card(
+          child: SizedBox(
+            width: AppConstants().screenWidth(context) / 3.5,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.sunny,
+
+                  ),
                 ),
-              ),
-              Text(weatherModel.temp.toString()),
-              Text(weatherModel.weather),
-              Text(weatherModel.city),
-            ],
+                WeatherText(text: weatherModel.city),
+                WeatherText(text: weatherModel.weather),
+                WeatherText(text: weatherModel.city),
+        
+              ],
+            ),
           ),
         ),
       ),
@@ -47,38 +48,21 @@ class WeatherCard extends StatelessWidget {
   }
 }
 
+class WeatherText extends StatelessWidget {
+  const WeatherText({
+    super.key,
+    required this.text,
+  });
 
-/*
-Card(
-        child: Container(
-          width: screenWidth(context) / 3.5,
-          height: screenHeight(context) / 15,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SvgPicture.asset(
-                  menuImage,
-                  height: screenWidth(context) / 10,
-                  colorFilter: ColorFilter.mode(logoColorPrimary, BlendMode.srcIn),
-                ),
-              ),
-              //Icon(Icons.mail_outline),
-              // Image.asset(menuImage,width: 24,),
-              Text(
-                menuName,
-                //style: TextStyle(color: Color(0xFF949494)
-                style: TextStyle(color: Colors.black54),
-              ),
-            ],
-          ),
-        ),
-      )
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(text),
+    );
+  }
+}
 
 
-       
-            Text(weatherModel.temp.toString()),
-            Text(weatherModel.weather),
-            Text(weatherModel.city),
-*/

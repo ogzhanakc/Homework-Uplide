@@ -21,12 +21,14 @@ class _HomeViewState extends State<HomeView> {
         title: Text("Home"),
       ),
       floatingActionButton: CustomFab(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          ProfileCard(),
-          WeatherView(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ProfileCard(),
+            WeatherView(),
+          ],
+        ),
       ),
     ));
   }
